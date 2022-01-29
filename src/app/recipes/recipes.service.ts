@@ -44,6 +44,6 @@ export class RecipesService {
         message: 'Do you really want to delete the recipe?',
         buttons: ['Cancel', confirmButton],
       })
-      .then((value) => value.present());
+      .then((alert) => alert.present());
   }
 }
