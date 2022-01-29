@@ -1,0 +1,9 @@
+<ion-item *ngIf="recipe">
+  <ion-avatar [routerLink]="[recipe.id]">
+    <img [src]="recipe.imageUrl" />
+  </ion-avatar>
+  <ion-label class="ion-margin-start" [routerLink]="[recipe.id]">{{ recipe.title }}</ion-label>
+  <ion-button (click)="deleteEvent.emit()" color="danger">
+    <ion-icon slot="icon-only" name="close"></ion-icon>
+  </ion-button>
+</ion-item>

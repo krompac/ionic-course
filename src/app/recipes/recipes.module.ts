@@ -8,10 +8,11 @@ import { RecipesPageRoutingModule } from './recipes-routing.module';
 
 import { RecipesPage } from './recipes.page';
 import { RecipeDetailPageModule } from './recipe-detail/recipe-detail.module';
+import { RecipeItemComponent } from './recipe-item/recipe-item.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, RecipesPageRoutingModule, RecipeDetailPageModule],
-  declarations: [RecipesPage],
+  declarations: [RecipesPage, RecipeItemComponent],
   exports: [RecipeDetailPageModule],
 })
 export class RecipesPageModule {}
