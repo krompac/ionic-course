@@ -1,9 +1,18 @@
-<ion-header>
+<ion-header *ngIf="place">
   <ion-toolbar>
-    <ion-title>place-detail</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="places"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{ place.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content *ngIf="place">
+  <div>
+    <ion-img [src]="place.imageUrl"></ion-img>
+  </div>
+  <p class="ion-margin-start">{{ place.description }}</p>
+  <p class="ion-margin-start">{{ place.price }}</p>
+  <ion-button (click)="onBookPlace()" color="primary" class="ion-margin"> Book </ion-button>
 </ion-content>

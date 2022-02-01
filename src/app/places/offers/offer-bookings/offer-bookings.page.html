@@ -1,9 +1,10 @@
-<ion-header>
+<ion-header *ngIf="offer">
   <ion-toolbar>
-    <ion-title>offer-bookings</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places/tabs/offers"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ offer.title }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-</ion-content>
+<ion-content> </ion-content>
