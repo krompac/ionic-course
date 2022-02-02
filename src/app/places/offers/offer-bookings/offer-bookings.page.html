@@ -7,4 +7,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content *ngIf="offer">
+  <ion-button class="ion-margin" color="primary" [routerLink]="['/', 'places', 'tabs', 'offers', 'edit', offer.id]">
+    Edit
+  </ion-button>
+</ion-content>
